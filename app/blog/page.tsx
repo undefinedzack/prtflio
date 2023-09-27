@@ -1,16 +1,16 @@
-import type { Metadata } from 'next';
-import Link from 'next/link';
-import { allBlogs } from 'contentlayer/generated';
-import ViewCounter from './view-counter';
-import { getViewsCount } from 'lib/metrics';
+import type { Metadata } from "next";
+import Link from "next/link";
+import { allBlogs } from "contentlayer/generated";
+import ViewCounter from "./view-counter";
+import { getViewsCount } from "lib/metrics";
 
 export const metadata: Metadata = {
-  title: 'Blog',
-  description: 'Read my thoughts on software development, design, and more.',
+  title: "Blog",
+  description: "Read my thoughts on software development, design, and more.",
 };
 
 export default async function BlogPage() {
-  const allViews = await getViewsCount();
+  // const allViews = await getViewsCount();
 
   return (
     <section>
@@ -32,11 +32,11 @@ export default async function BlogPage() {
               <p className="text-neutral-900 dark:text-neutral-100 tracking-tight">
                 {post.title}
               </p>
-              <ViewCounter
+              {/* <ViewCounter
                 allViews={allViews}
                 slug={post.slug}
                 trackView={false}
-              />
+              /> */}
             </div>
           </Link>
         ))}
