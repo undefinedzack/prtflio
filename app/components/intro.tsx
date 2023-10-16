@@ -36,6 +36,12 @@ const Intro = () => {
           </div>
         </div>
       </div>
+
+      <div className="w-full flex mt-10 md:mt-20">
+        <p className="font-serif text-gray-500 font-bold text-2xl lg:text-3xl">
+          Tech Stack...
+        </p>
+      </div>
     </div>
   );
 };
