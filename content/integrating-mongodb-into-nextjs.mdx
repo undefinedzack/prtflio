@@ -1,5 +1,5 @@
 ---
-title: "Hello, World!"
+title: "Integrating MongoDb"
 publishedAt: "2023-01-01"
 summary: "This is your first blog post."
 ---
@@ -14,12 +14,7 @@ summary: "This is your first blog post."
 npx create-next-app nextjs-mongodb --typescript
 ```
 
-<Image
-  alt={`Example of the image gallery`}
-  src={`/images/mongodb/Untitled.png`}
-  width={2900 / 2}
-  height={2228 / 2}
-/>
+![Untitled](How%20to%20integrate%20MongoDb%20in%20your%20Next%20js%20project%20d83d4f72e84544ceb9a253a964049034/Untitled.png)
 
 1. Thats it! Just open up your project in your favourite code editor.
 2. Run the dev server
@@ -28,21 +23,18 @@ npx create-next-app nextjs-mongodb --typescript
 yarn dev
 ```
 
+<!-- ![Untitled](How%20to%20integrate%20MongoDb%20in%20your%20Next%20js%20project%20d83d4f72e84544ceb9a253a964049034/Untitled%201.png) -->
+
 <Image
   alt={`Example of the image gallery`}
-  src={`/images/mongodb/Untitled1.png`}
+  src={`/images/mongodb/Untitled.png`}
   width={2900 / 2}
   height={2228 / 2}
 />
 
 - Over to **http://localhost:3000,** we’ll see
 
-<Image
-  alt={`Example of the image gallery`}
-  src={`/images/mongodb/Untitled 2.png`}
-  width={2900 / 2}
-  height={2228 / 2}
-/>
+![Untitled](How%20to%20integrate%20MongoDb%20in%20your%20Next%20js%20project%20d83d4f72e84544ceb9a253a964049034/Untitled%202.png)
 
 # Installing MongoDb
 
@@ -54,9 +46,9 @@ yarn add mongodb
 
 # Prerequisites
 
-- If you don’t have a MongoDb Atlas Cluster, you can create one for free! Follow the steps from this article → https://studio3t.com/knowledge-base/articles/mongodb-atlas-tutorial/#set-up-a-free-mongodb-atlas-cluster
+- If you don’t have a MongoDb Atlas Cluster, you can create one for free! Follow the steps from this article → [https://studio3t.com/knowledge-base/articles/mongodb-atlas-tutorial/#set-up-a-free-mongodb-atlas-cluster](https://studio3t.com/knowledge-base/articles/mongodb-atlas-tutorial/#set-up-a-free-mongodb-atlas-cluster)
 - Get your **username** and **password,** after going through the cluster setup and configuration of ip and address and connection string, which we’ll use to connect to our MongoDb from our Next.js app.
-- If you prefer your database to be local instead of in _the cloud_, you can go through → https://www.prisma.io/dataguide/mongodb/setting-up-a-local-mongodb-database
+- If you prefer your database to be local instead of in _the cloud_, you can go through → [https://www.prisma.io/dataguide/mongodb/setting-up-a-local-mongodb-database](https://www.prisma.io/dataguide/mongodb/setting-up-a-local-mongodb-database)
 
 # Let’s get started
 
@@ -69,12 +61,7 @@ MONGODB_DB=Database-Name
 
 - Create a **lib** folder inside your root directory, here we’ll store our MongoDb config file.
 
-<Image
-  alt={`Example of the image gallery`}
-  src={`/images/mongodb/Untitled 3.png`}
-  width={2900 / 2}
-  height={2228 / 2}
-/>
+![Untitled](How%20to%20integrate%20MongoDb%20in%20your%20Next%20js%20project%20d83d4f72e84544ceb9a253a964049034/Untitled%203.png)
 
 - Add a file named **mongodb.ts** inside the lib folder
 
@@ -134,12 +121,7 @@ export async function connectToDatabase() {
 
 - Load sample data or you can add some random data of your own in your database, to get some results instead of empty array when we’ll GET request them.
 
-<Image
-  alt={`Example of the image gallery`}
-  src={`/images/mongodb/Untitled 4.png`}
-  width={2900 / 2}
-  height={2228 / 2}
-/>
+![Untitled](How%20to%20integrate%20MongoDb%20in%20your%20Next%20js%20project%20d83d4f72e84544ceb9a253a964049034/Untitled%204.png)
 
 - For instance I’ve added my blogs to MongoDb and I’ll GET request them, you can do the similar by
   - Go to **Browse Collections**
@@ -149,12 +131,7 @@ export async function connectToDatabase() {
   - Remember you’ll have to replace the **Database-Name** in your .env.local file**,** with the name of your database you’ll create here.
 - Create a file (indirectly route, thanks to Next.js!) within **pages/api** folder, I’m making it for my blogs so I’ll create **blogs.ts**.
 
-<Image
-  alt={`Example of the image gallery`}
-  src={`/images/mongodb/Untitled 5.png`}
-  width={2900 / 2}
-  height={2228 / 2}
-/>
+![Untitled](How%20to%20integrate%20MongoDb%20in%20your%20Next%20js%20project%20d83d4f72e84544ceb9a253a964049034/Untitled%205.png)
 
 ```tsx
 import { NextApiRequest, NextApiResponse } from "next";
@@ -183,12 +160,7 @@ export default async function handler(
 http://localhost:3000/api/blogs
 ```
 
-<Image
-  alt={`Example of the image gallery`}
-  src={`/images/mongodb/Untitled 6.png`}
-  width={2900 / 2}
-  height={2228 / 2}
-/>
+![Untitled](How%20to%20integrate%20MongoDb%20in%20your%20Next%20js%20project%20d83d4f72e84544ceb9a253a964049034/Untitled%206.png)
 
 - and it’s working!
 - Now you can customise the api with CRUD or whatnot as per your needs. There’s no end to the extent of customisation.

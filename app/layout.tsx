@@ -9,6 +9,7 @@ import { Analytics } from "@vercel/analytics/react";
 import { NextUIProvider } from "@nextui-org/react";
 import NavigationBar from "./components/navbar";
 import { Providers } from "./providers";
+import Head from "next/head";
 
 const graphik = localFont({
   src: [
@@ -28,7 +29,7 @@ const graphik = localFont({
 });
 
 // export const metadata: Metadata = {
-//   metadataBase: new URL("https://leerob.io"),
+//   metadataBase: new URL("https://adhney.in"),
 //   title: {
 //     default: "Lee Robinson",
 //     template: "%s | Lee Robinson",
@@ -37,7 +38,7 @@ const graphik = localFont({
 //   openGraph: {
 //     title: "Lee Robinson",
 //     description: "Developer, writer, and creator.",
-//     url: "https://leerob.io",
+//     url: "https://adhney.in",
 //     siteName: "Lee Robinson",
 //     locale: "en_US",
 //     type: "website",
@@ -76,7 +77,7 @@ export default function RootLayout({
         graphik.variable
       )}
     >
-      <body>
+      <body className="min-h-screen">
         <Providers>
           <NavigationBar />
           <div className="max-w-3xl mb-40 flex flex-col md:flex-row mx-4 mt-8 lg:mx-auto">

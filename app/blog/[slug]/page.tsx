@@ -23,8 +23,8 @@ export async function generateMetadata({
     slug,
   } = post;
   const ogImage = image
-    ? `https://leerob.io${image}`
-    : `https://leerob.io/og?title=${title}`;
+    ? `https://adhney.in${image}`
+    : `https://adhney.in/og?title=${title}`;
 
   return {
     title,
@@ -34,7 +34,7 @@ export async function generateMetadata({
       description,
       type: "article",
       publishedTime,
-      url: `https://leerob.io/blog/${slug}`,
+      url: `https://adhney.in/blog/${slug}`,
       images: [
         {
           url: ogImage,
@@ -103,21 +103,21 @@ export default async function Blog({ params }) {
           {formatDate(post.publishedAt)}
         </p>
         {/* I also want an error boundary here */}
-        {/* <Suspense>
+        <Suspense>
           <Views slug={post.slug} />
-        </Suspense> */}
+        </Suspense>
       </div>
       <Mdx code={post.body.code} />
     </section>
   );
 }
 
-// async function Views({ slug }: { slug: string }) {
-//   let views;
-//   try {
-//     views = await getViewsCount();
-//   } catch (error) {
-//     console.error(error);
-//   }
-//   return <ViewCounter allViews={views} slug={slug} trackView />;
-// }
+async function Views({ slug }: { slug: string }) {
+  let views;
+  try {
+    views = await getViewsCount();
+  } catch (error) {
+    console.error(error);
+  }
+  return <ViewCounter allViews={views} slug={slug} trackView />;
+}
