@@ -1,4 +1,5 @@
 import Link from "next/link";
+import TechStack from "./tech-stack";
 
 const Intro = () => {
   return (
@@ -12,8 +13,10 @@ const Intro = () => {
             alt="adhney"
           />
         </div>
-        <div className="w-full lg:w-3/4 flex flex-col items-center justify-center">
-          <div className="text-center text-xl md:text-2xl">Hey👋 I'm</div>
+        <div className="w-full mt-5  lg:w-3/4 flex flex-col items-center justify-center">
+          <div className="text-center text-gray-500 text-xl md:text-2xl">
+            Hey 👋🏻 I'm
+          </div>
           <div
             className="text-center"
             style={{
@@ -25,7 +28,7 @@ const Intro = () => {
           >
             Adhney
           </div>
-          <div className="text-center text-xl">
+          <div className="text-center text-gray-500 text-xl">
             SDE @{" "}
             <Link
               className="text-sky-400 decoration-pink-500"
@@ -37,10 +40,8 @@ const Intro = () => {
         </div>
       </div>
 
-      <div className="w-full flex mt-10 md:mt-20">
-        <p className="font-serif text-gray-500 font-bold text-2xl lg:text-3xl">
-          Tech Stack...
-        </p>
+      <div className="w-full flex flex-col mt-10 md:mt-20">
+        <TechStack />
       </div>
     </div>
   );
