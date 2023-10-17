@@ -1,3 +1,5 @@
+"use client";
+
 import { useState } from "react";
 import { FiGithub, FiLinkedin, FiTwitter } from "react-icons/fi";
 
