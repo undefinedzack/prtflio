@@ -16,7 +16,7 @@ const Projects = ({ numOfProjects }: IProjects) => {
         <p className="font-serif font-bold text-2xl lg:text-3xl">Projects</p>
       </div>
 
-      <div className="grid grid-cols-2 gap-4">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
         {projectLinks
           .slice(0, numOfProjects || projectLinks.length)
           .map((project, index) => (

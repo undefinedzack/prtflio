@@ -1,5 +1,6 @@
 import Link from "next/link";
 import TechStack from "./tech-stack";
+import ExperienceTimeline from "./experience";
 
 const Intro = () => {
   return (
@@ -42,6 +43,7 @@ const Intro = () => {
 
       <div className="w-full flex flex-col mt-10 md:mt-20">
         <TechStack />
+        {/* <ExperienceTimeline /> */}
       </div>
     </div>
   );

@@ -10,6 +10,7 @@ import { NextUIProvider } from "@nextui-org/react";
 import NavigationBar from "./components/navbar";
 import { Providers } from "./providers";
 import Head from "next/head";
+import Footer from "./components/footer";
 
 const graphik = localFont({
   src: [
@@ -77,15 +78,16 @@ export default function RootLayout({
         graphik.variable
       )}
     >
-      <body className="min-h-screen">
+      <body className="min-h-screen flex flex-col">
         <Providers>
           <NavigationBar />
-          <div className="max-w-3xl mb-40 flex flex-col md:flex-row mx-4 mt-8 lg:mx-auto">
+          <div className="max-w-3xl flex-grow mb-40 flex flex-col md:flex-row mx-4 mt-8 lg:mx-auto">
             <main className="flex-auto min-w-0 flex flex-col px-2 md:px-0">
               {children}
               <Analytics />
             </main>
           </div>
+          <Footer />
         </Providers>
       </body>
     </html>
