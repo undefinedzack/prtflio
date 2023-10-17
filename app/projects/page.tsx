@@ -5,11 +5,23 @@ import Link from "next/link";
 
 import { FiLink, FiGithub } from "react-icons/fi";
 
-interface IProjects {
-  numOfProjects?: number;
+// interface IProjects {
+//   numOfProjects?: number;
+// }
+
+interface IProject {
+  key: number;
+  project: {
+    name: string;
+    link: string;
+    description: string;
+    date: string;
+    image: string;
+    liveAt?: string;
+  };
 }
 
-const Projects = ({ numOfProjects }: IProjects) => {
+const Projects = ({ numOfProjects }: any) => {
   return (
     <div className="flex flex-col mt-5">
       <div className="w-full flex">
@@ -26,18 +38,6 @@ const Projects = ({ numOfProjects }: IProjects) => {
     </div>
   );
 };
-
-interface IProject {
-  key: number;
-  project: {
-    name: string;
-    link: string;
-    description: string;
-    date: string;
-    image: string;
-    liveAt?: string;
-  };
-}
 
 const ProjectCard = ({ project }: IProject) => (
   <div className="mt-3">
@@ -91,9 +91,7 @@ const ProjectCard = ({ project }: IProject) => (
   // </Card>
 );
 
-export default Projects;
-
-export const projectLinks = [
+const projectLinks = [
   {
     name: "Blogger",
     link: "https://github.com/undefinedzack/Blogger",
@@ -190,3 +188,5 @@ export const projectLinks = [
       "https://github.com/undefinedzack/Django-User-Roles-and-Permissions/blob/master/images/1.jpg?raw=true",
   },
 ];
+
+export default Projects;
