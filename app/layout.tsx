@@ -5,10 +5,10 @@ import localFont from "next/font/local";
 
 import { Analytics } from "@vercel/analytics/react";
 
-import NavigationBar from "./components/navbar";
+import NavigationBar from "../components/navbar";
 import { Providers } from "./providers";
 
-import Footer from "./components/footer";
+import Footer from "../components/footer";
 import { useServerInsertedHTML } from "next/navigation";
 
 const graphik = localFont({

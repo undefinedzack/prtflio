@@ -15,9 +15,7 @@ const nextConfig = {
       },
     ],
   },
-  experimental: {
-    serverActions: true,
-  },
+
   redirects() {
     try {
       return get("redirects");
