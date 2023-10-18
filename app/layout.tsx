@@ -9,7 +9,6 @@ import NavigationBar from "../components/navbar";
 import { Providers } from "./providers";
 
 import Footer from "../components/footer";
-import { useServerInsertedHTML } from "next/navigation";
 
 const graphik = localFont({
   src: [
