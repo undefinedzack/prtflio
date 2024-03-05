@@ -1,30 +1,30 @@
-import "./global.css";
-import clsx from "clsx";
+import './global.css';
+import clsx from 'clsx';
 
-import localFont from "next/font/local";
+import localFont from 'next/font/local';
 
-import { Analytics } from "@vercel/analytics/react";
+import { Analytics } from '@vercel/analytics/react';
 
-import NavigationBar from "../components/navbar";
-import { Providers } from "./providers";
+import NavigationBar from '../components/navbar';
+import { Providers } from './providers';
 
-import Footer from "../components/footer";
+import Footer from '../components/footer';
 
 const graphik = localFont({
   src: [
     {
-      path: "../public/fonts/Graphik-Regular.ttf",
-      weight: "400",
-      style: "normal",
+      path: '../public/fonts/Graphik-Regular.ttf',
+      weight: '400',
+      style: 'normal',
     },
     {
-      path: "../public/fonts/Graphik-Medium.ttf",
-      weight: "600",
-      style: "bold",
+      path: '../public/fonts/Graphik-Medium.ttf',
+      weight: '600',
+      style: 'bold',
     },
   ],
-  variable: "--font-graphik",
-  display: "swap",
+  variable: '--font-graphik',
+  display: 'swap',
 });
 
 export default function RootLayout({
@@ -36,8 +36,8 @@ export default function RootLayout({
     <html
       lang="en"
       className={clsx(
-        "text-black bg-white dark:text-white dark:bg-[#111010]",
-        graphik.variable
+        'text-black bg-white dark:text-white dark:bg-[#333333]',
+        graphik.variable,
       )}
     >
       <body className="min-h-screen flex flex-col">
