@@ -103,9 +103,9 @@ export default async function Blog({ params }) {
           {formatDate(post.publishedAt)}
         </p>
         {/* I also want an error boundary here */}
-        <Suspense>
+        {/* <Suspense>
           <Views slug={post.slug} />
-        </Suspense>
+        </Suspense> */}
       </div>
       <Mdx code={post.body.code} />
     </section>
