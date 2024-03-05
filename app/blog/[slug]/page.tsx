@@ -1,11 +1,11 @@
-import type { Metadata } from "next";
-import { notFound } from "next/navigation";
-import { Mdx } from "components/mdx";
-import { allBlogs } from "contentlayer/generated";
-import Balancer from "react-wrap-balancer";
-import ViewCounter from "../view-counter";
-import { getViewsCount } from "lib/metrics";
-import { Suspense } from "react";
+import type { Metadata } from 'next';
+import { notFound } from 'next/navigation';
+import { Mdx } from 'components/mdx';
+import { allBlogs } from 'contentlayer/generated';
+import Balancer from 'react-wrap-balancer';
+// import ViewCounter from '../view-counter';
+import { getViewsCount } from 'lib/metrics';
+import { Suspense } from 'react';
 
 export async function generateMetadata({
   params,
@@ -32,7 +32,7 @@ export async function generateMetadata({
     openGraph: {
       title,
       description,
-      type: "article",
+      type: 'article',
       publishedTime,
       url: `https://adhney.in/blog/${slug}`,
       images: [
@@ -42,7 +42,7 @@ export async function generateMetadata({
       ],
     },
     twitter: {
-      card: "summary_large_image",
+      card: 'summary_large_image',
       title,
       description,
       images: [ogImage],
@@ -58,7 +58,7 @@ function formatDate(date: string) {
   const monthsAgo = currentDate.getMonth() - targetDate.getMonth();
   const daysAgo = currentDate.getDate() - targetDate.getDate();
 
-  let formattedDate = "";
+  let formattedDate = '';
 
   if (yearsAgo > 0) {
     formattedDate = `${yearsAgo}y ago`;
@@ -67,13 +67,13 @@ function formatDate(date: string) {
   } else if (daysAgo > 0) {
     formattedDate = `${daysAgo}d ago`;
   } else {
-    formattedDate = "Today";
+    formattedDate = 'Today';
   }
 
-  const fullDate = targetDate.toLocaleString("en-us", {
-    month: "long",
-    day: "numeric",
-    year: "numeric",
+  const fullDate = targetDate.toLocaleString('en-us', {
+    month: 'long',
+    day: 'numeric',
+    year: 'numeric',
   });
 
   return `${fullDate} (${formattedDate})`;
@@ -119,5 +119,5 @@ async function Views({ slug }: { slug: string }) {
   } catch (error) {
     console.error(error);
   }
-  return <ViewCounter allViews={views} slug={slug} trackView />;
+  // return <ViewCounter allViews={views} slug={slug} trackView />;
 }
